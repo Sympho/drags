@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Drags</title>
+	<style>
+	.box {
+		width: 100px;
+		height: 100px;
+		background: rgba(61, 143,255,1);
+		position: absolute;
+		font-family: sans-serif;
+	}
+	.drags_active {
+		background: rgba(252,231,20,1);
+		z-index: 50;
+	}
+	.drags_time {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	</style>
+</head>
+<body>
+	<div class="box">Drags me!</div>
+	<div class="box">Drags me too!</div>
+	<div class="box">Drags me wholly!</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="drags.min.js"></script>
+	<script>
+		$(function(){
+			$('.box').drags();
+		});
+	</script>
+</body>
+</html>
